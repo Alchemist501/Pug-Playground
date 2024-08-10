@@ -35,3 +35,9 @@ OR
         Everyone
 
 - Adding a div element: To add a div element, simply use . followed by the class name and # followed by the id. For example: `.className#idName` creates `<div class="className" id="idName"></div>`.
+
+- Adding a Link: To add a link, use the a() tag followed by the text.
+  Example: `a(href="https://example.com") Click here` creates `<a href="https://example.com">Click here</a>`.
+
+- Linking a Stylesheet: To link a stylesheet, use the `link()` tag with attributes as parameters.
+  Example: `link(rel="stylesheet", href="styles.css")` creates `<link rel="stylesheet" href="styles.css">`.
