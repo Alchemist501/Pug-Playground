@@ -28,11 +28,11 @@ Clone the repository and navigate through the different folders to see examples 
             |Hello
             |Everyone
 
-OR
+  OR
 
-    h1.
-        Hello
-        Everyone
+      h1.
+          Hello
+          Everyone
 
 - Adding a div element: To add a div element, simply use . followed by the class name and # followed by the id. For example: `.className#idName` creates `<div class="className" id="idName"></div>`.
 
@@ -41,3 +41,78 @@ OR
 
 - Linking a Stylesheet: To link a stylesheet, use the `link()` tag with attributes as parameters.
   Example: `link(rel="stylesheet", href="styles.css")` creates `<link rel="stylesheet" href="styles.css">`.
+
+- Adding 2 classes for the same element : Use . between the classes.
+  Example: `section.section-grid.section1` creates `<section class = "section-grid section1">`.
+
+- Emmet Abbreviations :
+
+  - To create child elements use '>' symbol.<br>
+    Example : `main.main>.div1>.div2>ul>li` creates
+
+          main.main
+            .div1
+              .div2
+                ul
+                  li
+
+    which is equal to html code :
+
+        <main class="main">
+          <div class="div1">
+            <div class="div2">
+              <ul>
+                <li> </li>
+              </ul>
+            </div>
+          </div>
+        </main>
+
+  - To create siblings element : Use '+' operator<br>
+    Example : `aside.asideContent+main#main+aside` creates
+
+        aside.asideContent
+          main#main
+          aside
+
+    which is equal to the html code :
+
+        <aside class="asideContent"> </aside>
+            <main id="main"> </main>
+            <aside> </aside>
+
+  - To create more than 1 number of same type of element use '\*' operator<br>
+    Example : `main.main>(ul#ul-Content>li*5)+ul.ul-Content>li*4` creates
+
+        main.main
+                ul#ul-Content
+                    li
+                    li
+                    li
+                    li
+                    li
+                ul.ul-Content
+                    li
+                    li
+                    li
+                    li
+
+        <main class="main">
+          <ul id="ul-Content">
+            <li> </li>
+            <li> </li>
+            <li> </li>
+            <li> </li>
+            <li> </li>
+          </ul>
+          <ul class="ul-Content">
+            <li> </li>
+            <li> </li>
+            <li> </li>
+            <li> </li>
+          </ul>
+        </main>
+
+  - To link the stylesheet : Use `link:css` which creates `
+link(rel="stylesheet", href="style.css")`
+  - `meta:vp` creates `meta(name="viewport", content="width=device-width, initial-scale=1.0")`
