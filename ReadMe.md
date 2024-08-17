@@ -116,3 +116,13 @@ Clone the repository and navigate through the different folders to see examples 
   - To link the stylesheet : Use `link:css` which creates `
 link(rel="stylesheet", href="style.css")`
   - `meta:vp` creates `meta(name="viewport", content="width=device-width, initial-scale=1.0")`
+
+- Include another pug file in main file use `include filename.pug`<br> Example :=
+
+      //footer.pug
+      footer
+        p © 2020 Acme Cleaning Services Ltd
+
+      //To include it in index file
+      body
+        include footer
