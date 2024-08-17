@@ -148,3 +148,21 @@ link(rel="stylesheet", href="style.css")`
           include pet.pug
 
   > It’s also possible to override a block to provide additional blocks, as shown in the following example. As it shows, content now exposes a sidebar and primary block for overriding. (Alternatively, the child template could override content altogether.)
+
+- JS variables : To show value inside variable we can use several methods
+
+      -let language = "Pug"
+      p #{language}
+      p= language //Buffered Code
+
+      // HTML CODE
+      <p>Pug</p>
+      <p>Pug</p>
+
+- Concatenation : We can create new strings with variables and text
+
+      p= "Language used is "+language
+      p= `Language used is ${language}`
+
+      <p>Language used is Pug</p>
+      <p>Language used is Pug</p>
