@@ -126,3 +126,25 @@ link(rel="stylesheet", href="style.css")`
       //To include it in index file
       body
         include footer
+
+- Template Inheritance : works via the `block` and `extends` keywords.
+
+      //- layout.pug
+      html
+        head
+          title My Site - #{title}
+        body
+          block content
+          block foot
+            #footer
+              p some footer content
+
+      //- page-a.pug
+      extends layout.pug
+      block content
+        h1= title
+        - var pets = ['cat', 'dog']
+        each petName in pets
+          include pet.pug
+
+  > It’s also possible to override a block to provide additional blocks, as shown in the following example. As it shows, content now exposes a sidebar and primary block for overriding. (Alternatively, the child template could override content altogether.)
