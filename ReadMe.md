@@ -161,8 +161,25 @@ link(rel="stylesheet", href="style.css")`
 
 - Concatenation : We can create new strings with variables and text
 
-      p= "Language used is "+language
-      p= `Language used is ${language}`
+        p= "Language used is "+language
+        p= `Language used is ${language}`
 
-      <p>Language used is Pug</p>
-      <p>Language used is Pug</p>
+        <p>Language used is Pug</p>
+        <p>Language used is Pug</p>
+
+- Iteration using `each` :The `each` keyword is used to define loops that iterate over data in templates. The each keyword is followed by the data to be iterated over.
+
+  Example :
+
+      - let names = ['Caraxes','Cannibel','Sunfyre']
+
+      ol
+        each name in names
+          li= name
+
+      //-Html code =>
+      <ol>
+        <li>Caraxes</li>
+        <li>Cannibel</li>
+        <li>Sunfyre</li>
+      </ol>
