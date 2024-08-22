@@ -183,3 +183,26 @@ link(rel="stylesheet", href="style.css")`
         <li>Cannibel</li>
         <li>Sunfyre</li>
       </ol>
+
+- Mixins := Allows you to create reusable blocks of Pug.
+
+      //- Declaration
+      mixin list
+        ul
+          li foo
+          li bar
+          li baz
+      //- Use
+      +list
+      +list
+      //- Html
+      <ul>
+        <li>foo</li>
+        <li>bar</li>
+        <li>baz</li>
+      </ul>
+      <ul>
+        <li>foo</li>
+        <li>bar</li>
+        <li>baz</li>
+      </ul>
